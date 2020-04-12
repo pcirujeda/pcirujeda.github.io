@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <link href="https://fonts.googleapis.com/css?family=Cutive+Mono" rel="stylesheet">
+  <title>Pol Cirujeda</title>
+
+  <style type="text/css">
+    * { margin: 0; padding: 0; }
+    body { font-family: 'Cutive Mono', monospace; font: 16px 'Cutive Mono', monospace; line-height: 24px; background: url(images/noise.jpg); }
+    .clear { clear: both; }
+    #page-wrap { width:1000px; margin: 40px auto 60px; }
+    #pic { float: right; margin: -10px -10px 0 0; }
+    h1 { margin: 0 0 16px 0; padding: 0 0 16px 0; font-size: 42px; font-weight: bold; letter-spacing: -2px; border-bottom: 1px solid #999; }
+    h2 { font-size: 18px; margin: 0 0 6px 0; position: relative; }
+    h2 span { position: absolute; bottom: 0; right: 0; font-style: italic; font-family: Georgia, Serif; font-size: 16px; color: #999; font-weight: normal; }
+    p { margin: 0 0 16px 0; }
+    a { color: #333; text-decoration: none; border-bottom: 1px dotted #999; }
+    a:hover { border-bottom-style: solid; color: black; }
+    ul { margin: 0 0 32px 17px; }
+    li { font-family: Georgia, Serif; font-style: italic; color: #666;}
+    #objective { width: 700px; float: left; margin-bottom: 20px; }
+    .description { font-family: Georgia, Serif; font-style: italic; color: #666; margin-bottom: 40px;}
+    dt { font-style: italic; font-weight: bold; font-size: 18px; text-align: right; ; width: 150px; float: left; }
+    dd { width: 750px; float: right; border-left: 1px solid #999; padding: 0 0 0 65px }
+    dd.clear { float: none; margin: 0; height: 30px; border: none; }
+    .form-input { width: 650px; height: 21px; padding: 5px; border: 1px solid #BBB; background-color: #EAEAEA; font-family: Georgia, Serif; font-weight: bold; font-size:14px;}
+    .form-text { height: 72px; }
+    .form-button { width: 90px; height: 24px; padding: 5px; border: 1px solid #BBB; background-color: #EAEAEA; font-family: Georgia, Serif; font-weight: bold; font-size:14px;}
+  </style>
+</head>
+
+<body>
+  <div id="page-wrap">
+    <img src="images/avatar.png" alt="That's me" id="pic" />
+      <div>
+        <h1>Pol Cirujeda</h1>
+      </div>
+                
+      <div id="objective" class="description">
+        <p>
+          Hi there! I'm Pol, a Computer Scientist from Barcelona. I am addicted to learning, kind people, and fresh air. I also love maps and architecture, among other <a href="https://www.instagram.com/erasenrewind">mundane passions</a>.
+        </p>
+        <p>
+          If I create software today, it's because of my grandma and Lego. One of my first days at elementary school she bought me a little set of these building blocks. That opened the path of constructive hobbies and, eventually, led to computer programming (because lines of code are cheaper and limitless).<br> I am naturally attracted to 3D Computer Vision, computational geometry and Machine Learning, and I like to <a href="https://github.com/pcirujeda">code in C++</a>.
+        </p>
+        <p>
+          Our futures are dreams we had as kids turned into reality. I got a PhD in Computer Science from <a href="https://www.upf.edu/">UPF</a> in 2015, and I have earnt my living as an applied researcher ever since.<br> Today I'm part of the great team at <a href="https://www.scaledrobotics.com">Scaled Robotics</a>, where we are fighting against the inefficiency and waste of resources in construction via computational analysis and robotics.
+        </p>
+      </div>
+        
+      <div class="clear"></div>  
+        <dl>
+          <dd class="clear"></dd>  
+          <dt>Projects</dt>
+          <dd>
+            <h2><a href="https://github.com/pcirujeda/CovGT-3DRegistration-matlab">* Covariance Descriptors + Game Theory solver 3D Registration</a></h2>
+            <p class="description">
+              A Matlab implementation of the method we presented in <a href="https://sci-hub.tw/10.1007/s11263-015-0820-2">IJCV 2015</a> and <a href="https://sci-hub.tw/10.1109/3dv.2014.11">3DV 2014</a>.<br>
+              It provides a 3D point cloud descriptor for the local definition of points and a Game Theory based approach for matching correspondences under global geometric constraints.
+            </p>
+
+            <h2><a href="https://github.com/pcirujeda/pICP">* pICP: plain Iterative Closest Point</a></h2>
+            <p class="description">A no-frills implementation in C++ of a simple rigid 3D registration algorithm. Easy to integrate, uses minimal dependencies.</p>
+          </dd>
+            
+          <dd class="clear"></dd>
+          <dt>Code divertimentos</dt>
+          <dd>
+            <h2><a href="https://github.com/pcirujeda/FastPhOdo">* FastPhOdo</a></h2>
+            <p class="description">A very simple visual odometry estimator using FAST descriptors in monocular image sequences.</p>
+          
+            <h2><a href="https://github.com/pcirujeda/yaglip">* YaGLip</a></h2>
+            <p class="description">Yet another Conway's Game of Life implementation (in 10 lines of Python -or a bit more)</p>
+          </dd>
+
+          <dd class="clear"></dd>  
+          <dt>Drop me a line</dt>
+          <dd>
+            <form action="https://formspree.io/xyydnakw" method="POST">
+              <p>
+                <label> Your Name:<br>
+                  <input type="text" name="name" class="form-input">
+                </label>
+              </p>
+              <p>
+                <label> Your Email:<br>
+                  <input type="email" name="replyto" class="form-input">
+                </label>
+              </p>
+              <p>
+                <label> Message:<br>
+                  <textarea name="message" class="form-input form-text"></textarea>
+                </label>
+              </p>
+              <input type="submit" value="Send" class="form-button">
+            </form>
+          </dd>
+            
+          <dd class="clear"></dd>
+          <dt>Find me</dt>
+          <dd>
+            <a href="https://www.linkedin.com/in/polcirujeda">LinkedIn</a><br>
+            <a href="https://github.com/pcirujeda">GitHub</a><br>
+            <a href="https://scholar.google.com/citations?user=WM6XXXIAAAAJ">Google Scholar</a><br>
+            <a href="https://www.instagram.com/erasenrewind">Instagram</a><br>
+            <a href="https://www.eyeem.com/u/pcirujeda/market">EyeEm</a>
+          </dd>
+            
+          <dd class="clear"></dd>
+        </dl>
+        
+        <div class="clear"></div>
+    </div>
+
+</body>
+</html>
