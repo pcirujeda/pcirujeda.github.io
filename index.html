@@ -180,21 +180,29 @@
     </div>
 
     <script>
-        // Show a random map within Europe, sort of
-        var randomLatitude = (Math.random() * (25.0) + 40.0).toFixed(4);
-        var randomLongitude = (Math.random() * 30.0).toFixed(4);
+    	// Retrieve maps and update tile content
+    	function loadBackgroundMap(latitude, longitude, map)
+    	{
+    		map.panTo([latitude.toFixed(4), longitude.toFixed(4)], { animate: true, duration: 3 });
 
-        var backgroundMap = L.map('map-background', {zoomControl: false}).setView([randomLatitude, randomLongitude], 10);
+        	L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}{r}.{ext}', {
+            	attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+            	minZoom: 0,
+            	maxZoom: 20,
+            	ext: 'png'
+        	}).addTo(map);
+    	}
 
-        L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}{r}.{ext}', {
-            attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-            minZoom: 0,
-            maxZoom: 20,
-            ext: 'png'
-        }).addTo(backgroundMap);
+    	// Initilize map to Barcelona
+    	var latitude = 41.395876;
+    	var longitude = 2.208213;
 
-        backgroundMap.dragging.disable();
-        backgroundMap.touchZoom.disable();
+    	var backgroundMap = L.map('map-background', {zoomControl: false});
+    	backgroundMap.setView([latitude, longitude], 10);
+    	loadBackgroundMap(latitude, longitude, backgroundMap);
+
+    	backgroundMap.dragging.disable();
+	    backgroundMap.touchZoom.disable();
         backgroundMap.doubleClickZoom.disable();
         backgroundMap.scrollWheelZoom.disable();
         backgroundMap.boxZoom.disable();
@@ -204,6 +212,21 @@
             backgroundMap.tap.disable();
 
         document.getElementById('map-background').style.cursor='default';
+
+        // Set timed function to randomize background map every 10 seconds	
+    	window.setInterval(
+    		function()
+    		{
+        		// Do a random walk within Europe, sort of
+        		var latitudeDelta = Math.random() * 10.0 - 5.0;
+        		var longitudeDelta = Math.random() * 10.0 - 5.0;
+
+        		latitude = Math.max( Math.min(latitude + latitudeDelta, 60.0), 40.0);
+        		longitude = Math.max( Math.min(longitude + longitudeDelta, 30.0), -10.0);
+
+        		loadBackgroundMap(latitude, longitude, backgroundMap)
+        	},
+        10000);
     </script>
 
 	<script type="text/javascript">
