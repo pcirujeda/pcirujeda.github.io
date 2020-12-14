@@ -3,6 +3,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Cutive+Mono" rel="stylesheet">
 		<title>Pol Cirujeda</title>
 		
@@ -12,8 +14,8 @@
 		<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
 		
 		<style type="text/css">
-			#map-background { height: 100%; width: 100%; position: absolute; top: 0; left: 0; z-index: -1000; position:fixed; opacity: 0.15;}
-			#page-wrap { width:920px; margin: 40px auto 60px; z-index: 1; background: rgba(255, 255, 255, .60);}
+			#map-background { height: 100%; width: 100%; position: absolute; top: 0; left: 0; z-index: -1000; position:fixed; opacity: 0.1;}
+			#page-wrap { width:920px; margin: 40px auto 60px; z-index: 1; }
 			#pic { float: right; margin: 0 -35px 0 0; }
 			#summary { width: 620px; float: left; margin-bottom: 20px; }
 
@@ -22,24 +24,24 @@
 			.tag { background-color: #EAEAEA; font-family: 'Cutive Mono', monospace; font: 16px 'Cutive Mono', monospace; color: #000; padding: 3px;}
 			.project-thumbnail { float: left; width: 120px; margin-right: 20px; }
 			.project-entry { float: left; width: 520px; min-height: 90px;}
-			.description { float: left; font-family: Georgia, Serif; font-style: italic; color: #000; margin-bottom: 40px;}
+			.description { float: left; font-family: 'Montserrat', sans-serif; color: #000; margin-bottom: 40px;}
 
-			.form-input { width: 650px; height: 21px; padding: 5px; border: 1px solid #BBB; background-color: #EAEAEA; font-family: Georgia, Serif; font-weight: bold; font-size:14px;}
+			.form-input { width: 650px; height: 21px; padding: 5px; border: 1px solid #BBB; background-color: #EAEAEA; font-family: 'Montserrat', sans-serif; font-weight: bold; font-size:14px;}
 			.form-text { height: 72px; resize: none; }
-			.form-button { width: 90px; height: 24px; padding: 5px; border: 1px solid #BBB; background-color: #EAEAEA; font-family: Georgia, Serif; font-weight: bold; font-size:14px;}
+			.form-button { width: 90px; height: 24px; padding: 5px; border: 1px solid #BBB; background-color: #EAEAEA; font-family: 'Montserrat', sans-serif; font-weight: bold; font-size:14px;}
 
 			* { margin: 0; padding: 0; }
 			body { font-family: 'Cutive Mono', monospace; font: 16px 'Cutive Mono', monospace; line-height: 24px; }
-			h1 { margin: 0 0 16px 0; padding: 0 0 16px 0; font-size: 42px; font-weight: bold; letter-spacing: -2px; border-bottom: 1px solid #666; }
-			h2 { font-size: 18px; margin: 0 0 6px 0; position: relative; }
-			h2 span { position: absolute; bottom: 0; right: 0; font-style: italic; font-family: Georgia, Serif; font-size: 16px; color: #666; font-weight: normal; }
+			h1 { margin: 0 0 16px 0; padding: 0 0 16px 0; font-size: 42px; font-weight: bolder; letter-spacing: -2px; text-shadow: 1px 1px green; border-bottom: 1px solid #666; }
+			h2 { font-size: 20px; margin: 0 0 6px 0; position: relative;}
+			h2 span { position: absolute; bottom: 0; right: 0; font-family: 'Montserrat', sans-serif; font-size: 16px; color: #666; font-weight: normal; }
 			p { margin: 0 0 16px 0; }
 			p.clear { margin: 0 0 5px 0;  }
 			a { color: #000; text-decoration: none; border-bottom: 1px dotted #333; }
 			a:hover { border-bottom-style: solid; color: black; }
 			ul { margin: 0 0 32px 17px; }
-			li { font-family: Georgia, Serif; font-style: italic; color: #000;}
-			dt { font-style: italic; font-weight: bold; font-size: 18px; text-align: right; ; width: 150px; float: left; }
+			li { font-family: 'Montserrat', sans-serif; color: #000;}
+			dt { font-weight: bold; font-size: 20px;  text-shadow: 1px 1px green; text-align: right; ; width: 150px; float: left; }
 			dd { width: 670px; float: right; border-left: 1px solid #000; padding: 0 0 0 65px }
 			dd.clear { float: none; margin: 0; height: 30px; border: none; }
 		</style>
@@ -223,6 +225,7 @@
 			document.getElementById('map-background').style.cursor='default';
 
 			// Set timed function to randomize background map every 10 seconds
+			/*
 			window.setInterval(
 				function()
 				{
@@ -234,6 +237,7 @@
 					loadBackgroundMap(latitude, longitude, backgroundMap)
 				},
 			10000);
+			*/
 		</script>
 		
 		<script type="text/javascript">
