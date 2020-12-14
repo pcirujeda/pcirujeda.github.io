@@ -204,9 +204,9 @@
 					}).addTo(map);
 			}
 
-			// Initilize map to Barcelona
-			var latitude = 41.395876;
-			var longitude = 2.208213;
+			// Initilize map to Zermatt, just because
+			var latitude = 46.0213;
+			var longitude = 7.7491;
 			var backgroundMap = L.map('map-background', {zoomControl: false});
 			
 			backgroundMap.setView([latitude, longitude], 10);
@@ -223,21 +223,6 @@
 				backgroundMap.tap.disable();
 		
 			document.getElementById('map-background').style.cursor='default';
-
-			// Set timed function to randomize background map every 10 seconds
-			/*
-			window.setInterval(
-				function()
-				{
-					// Do a random walk within Europe, sort of
-					var latitudeDelta = Math.random() * 10.0 - 5.0;
-					var longitudeDelta = Math.random() * 10.0 - 5.0;
-					latitude = Math.max( Math.min(latitude + latitudeDelta, 60.0), 40.0);
-					longitude = Math.max( Math.min(longitude + longitudeDelta, 30.0), -10.0);
-					loadBackgroundMap(latitude, longitude, backgroundMap)
-				},
-			10000);
-			*/
 		</script>
 		
 		<script type="text/javascript">
